@@ -7,6 +7,10 @@
 
 # 如何使用？
 1.在自己的可执行文件中添加编译选项-g -finstrument-functions -export-dynamic,以cmakelists.txt为例
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -finstrument-functions -export-dynamic")
+```cmake
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -finstrument-functions -export-dynamic")
+```
 2.在自己的可执行文件中链接libfunctionTrace.so,以cmakelists.txt为例
-    target_link_libraries(functionTraceDemo functionTrace)
+```cmake
+target_link_libraries(functionTraceDemo functionTrace)
+```
